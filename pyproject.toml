@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlastrace"
+version = "0.1.0"
+description = "Passive OSINT investigation multitool for case management, evidence capture, graphing, and reporting."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Toka" }
+]
+keywords = ["osint", "investigation", "forensics", "research", "archive", "graph", "cli"]
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi", "uvicorn"]
+extract = ["trafilatura"]
+media = ["Pillow", "pytesseract"]
+full = ["fastapi", "uvicorn", "trafilatura", "Pillow", "pytesseract"]
+
+[project.scripts]
+atlastrace = "atlastrace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
