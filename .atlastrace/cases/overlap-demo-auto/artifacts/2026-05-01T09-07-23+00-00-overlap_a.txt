@@ -1,0 +1,5 @@
+Primary contact: [email protected]
+Backup mailbox: [email protected]
+Portal: https://alpha.example.org/login
+Phone: +33 6 12 34 56 78
+
